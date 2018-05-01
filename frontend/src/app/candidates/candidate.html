@@ -1,8 +1,11 @@
 <div class="tech">
-  <img class="tech-logo" ng-src="{{ $ctrl.tech.logo }}"/>
+  <img class="tech-logo" ng-src="{{ $ctrl.candidate.logo }}"/>
   <h3 class="tech-h3">
-    {{ $ctrl.tech.title }}
+    {{ $ctrl.candidate.first_name }} {{ $ctrl.candidate.last_name }}
   </h3>
-  <p>{{ $ctrl.tech.text1 }}</p>
-  <p>{{ $ctrl.tech.text2 }}</p>
+  <h4 class="tech-h4">
+    {{ $ctrl.candidate.torre_public_id }}
+  </h4>
+  <p>Similarity: {{ $ctrl.candidate.similarity }}</p>
+  <p>{{ $ctrl.candidate.text2 }}</p>
 </div>
