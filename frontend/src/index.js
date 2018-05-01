@@ -1,6 +1,6 @@
 import angular from 'angular';
 
-import {techsModule} from './app/techs/index';
+import {candidatesModule} from './app/candidates/index';
 import 'angular-ui-router';
 import routesConfig from './routes';
 
@@ -12,7 +12,7 @@ import {footer} from './app/footer';
 import './index.css';
 
 angular
-  .module('app', [techsModule, 'ui.router'])
+  .module('app', [candidatesModule, 'ui.router'])
   .config(routesConfig)
   .component('app', main)
   .component('fountainHeader', header)
