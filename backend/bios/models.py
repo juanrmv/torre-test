@@ -78,9 +78,9 @@ def post_save_candidate(sender, instance, **kwargs):
 @receiver(post_save, sender=LinkedInProfile)
 def post_save_linked_in_profile(sender, instance, **kwargs):
     if instance.candidate.status == 1:
-        from bios.functions import import_torre_bio
+        from bios.functions import import_linked_in
         try:
-            profile = import_torre_bio(instance)
+            profile = import_linked_in(instance)
             instance.candidate.status = 4
             TorreProfile.objects.create(candidate=instance, content=profile['profile'],
                                         jobs_count=profile['jobs_count'], education_count=profile['education_count'])
